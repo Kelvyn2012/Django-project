@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  {% extends 'blog/base.html' %}
+  <body>
+    {% block content %}
+    <div class="content-section">
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Join Today</legend>
+          {{form}}
+        </fieldset>
+        <div class="form-group">
+          <button class="btn btn-outline-info" type="submit">Sign Up</button>
+        </div>
+      </form>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+          Already have an account? <a class="ml-2" href="http://">Sign In</a>
+        </small>
+      </div>
+    </div>
+    {% endblock %}
+    <script src="" async defer></script>
+  </body>
+</html>
