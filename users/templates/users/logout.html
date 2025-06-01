@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  {% extends 'blog/base.html' %}
+  <body>
+    {% block content %}
+
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        <h2>You have been logged out</h2>
+        <form action="{% url 'logout' %}" method="post" style="display: inline">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-outline-light">Logout</button>
+        </form>
+      </small>
+    </div>
+
+    {% endblock %}
+    <script src="" async defer></script>
+  </body>
+</html>

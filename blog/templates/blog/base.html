@@ -37,6 +37,11 @@
                   <div class="navbar-nav">
                     <a class="nav-item nav-link" href="#">Login</a>
                     <a class="nav-item nav-link" href="#">Register</a>
+                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-light">Logout</button>
+</form>
+
                   </div>
                 </div>
               </div>
